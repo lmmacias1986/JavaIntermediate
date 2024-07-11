@@ -18,7 +18,6 @@ public class ExperimentalPlane extends Plane{
         return classificationLevel;
     }
 
-
     @Override
     public boolean equals(Object o) {
         return super.equals(o);

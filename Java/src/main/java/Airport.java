@@ -6,9 +6,9 @@ import planes.Plane;
 
 import java.util.*;
 
-// version: 1.1
-// made by Vitali Shulha
-// 4-Jan-2019
+// version: 1.2
+// made by Dmytro Leliavskyi
+// 11-Jul-2024
 
 public class Airport {
     private List<? extends Plane> planes;
