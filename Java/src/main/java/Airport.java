@@ -95,11 +95,6 @@ public class Airport {
         return planes;
     }
 
-
-    private void print(Collection<? extends Plane> collection) {
-        collection.forEach(System.out::println);
-    }
-
     @Override
     public String toString() {
         return "Airport{" +

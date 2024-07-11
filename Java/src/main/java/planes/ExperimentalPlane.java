@@ -14,21 +14,10 @@ public class ExperimentalPlane extends Plane{
         this.classificationLevel = classificationLevel;
     }
 
-    public ExperimentalTypes getExperimentalType() {
-        return experimentalType;
-    }
-
-    public void setExperimentalType(ExperimentalTypes experimentalType) {
-        this.experimentalType = experimentalType;
-    }
-
     public ClassificationLevel getClassificationLevel(){
         return classificationLevel;
     }
 
-    public void setClassificationLevel(ClassificationLevel classificationLevel){
-        this.classificationLevel = classificationLevel;
-    }
 
     @Override
     public boolean equals(Object o) {
