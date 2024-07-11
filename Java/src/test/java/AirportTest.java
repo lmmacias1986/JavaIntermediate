@@ -51,6 +51,7 @@ public class AirportTest {
     public void testGetPassengerPlaneWithMaxCapacity() {
         Airport airport = new Airport(planes);
         PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
+
         Assert.assertEquals(expectedPlaneWithMaxPassengersCapacity, planeWithMaxPassengerCapacity);
     }
 
@@ -78,6 +79,7 @@ public class AirportTest {
         List<MilitaryPlane> bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
         boolean hasBomber = bomberMilitaryPlanes.stream()
                 .anyMatch(militaryPlane -> militaryPlane.getType() == MilitaryType.BOMBER);
+
         Assert.assertTrue(hasBomber);
     }
 
@@ -87,6 +89,7 @@ public class AirportTest {
         List<ExperimentalPlane> experimentalPlanes = airport.getExperimentalPlanes();
         boolean hasUnclassifiedPlanes = experimentalPlanes.stream()
                 .anyMatch(experimentalPlane -> experimentalPlane.getClassificationLevel() == ClassificationLevel.UNCLASSIFIED);
+
         Assert.assertFalse(hasUnclassifiedPlanes);
     }
 }
