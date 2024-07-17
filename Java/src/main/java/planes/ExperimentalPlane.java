@@ -2,9 +2,16 @@ package planes;
 
 import models.ClassificationLevel;
 import models.ExperimentalTypes;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.EqualsAndHashCode;
 
-public class ExperimentalPlane extends Plane{
-
+@Getter
+@Setter
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+public class ExperimentalPlane extends Plane {
     private ExperimentalTypes experimentalType;
     private ClassificationLevel classificationLevel;
 
@@ -12,26 +19,5 @@ public class ExperimentalPlane extends Plane{
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
         this.experimentalType = experimentalType;
         this.classificationLevel = classificationLevel;
-    }
-
-    public ClassificationLevel getClassificationLevel(){
-        return classificationLevel;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return "experimentalPlane{" +
-                "model='" + model + '\'' +
-                '}';
     }
 }

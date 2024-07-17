@@ -39,7 +39,7 @@ public class AirportTest {
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
         boolean flag = false;
         for (MilitaryPlane militaryPlane : transportMilitaryPlanes) {
-            if ((militaryPlane.getType() == MilitaryType.TRANSPORT)) {
+            if ((militaryPlane.getMilitaryType() == MilitaryType.TRANSPORT)) {
                 flag = true;
                 break;
             }
@@ -70,7 +70,7 @@ public class AirportTest {
                         break;
             }
         }
-        Assert.assertTrue(isSorted);
+        Assert.assertTrue(isSorted, "List of planes is not sorted by max load capacity");
     }
 
     @Test
@@ -78,7 +78,7 @@ public class AirportTest {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
         boolean hasBomber = bomberMilitaryPlanes.stream()
-                .anyMatch(militaryPlane -> militaryPlane.getType() == MilitaryType.BOMBER);
+                .anyMatch(militaryPlane -> militaryPlane.getMilitaryType() == MilitaryType.BOMBER);
 
         Assert.assertTrue(hasBomber);
     }
