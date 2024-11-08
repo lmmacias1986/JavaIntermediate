@@ -15,22 +15,15 @@ abstract public class Plane {
         this.maxLoadCapacity = maxLoadCapacity;
     }
 
-    public String getModel() {
-        return model;
-    }
-
     public int getMS() {
         return maxSpeed;
     }
 
-    public int Get_Max_Flight_Distance() {
+    public int GetMaxFlightDistance() {
         return maxFlightDistance;
     }
 
-    public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
-        return result;
-    }
+    public int getMinLoadCapacity() { return this.maxLoadCapacity; }
 
     @Override
     public String toString() {
